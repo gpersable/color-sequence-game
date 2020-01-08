@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Simon Game: A Color Sequence Game</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Courier+Prime|Press+Start+2P|Work+Sans:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1 id="level-title">Press Any Key to Start</h1>
+
+  <div class="container">
+
+      <div type="button" id="green" class="btn green">
+      </div>
+
+      <div type="button" id="red" class="btn red">
+      </div>
+
+      <div type="button" id="yellow" class="btn yellow">
+      </div>
+
+      <div type="button" id="blue" class="btn blue">
+      </div>
+
+  </div>
+
+  <i id="modalBtn" class="fas fa-question-circle"></i>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>How to Play</h2>
+      </div>
+      <div class="modal-body">
+
+        <ol>
+          <li>Press any key to start</li>
+          <li>Simon will show you which button you shall click on your next move, following the previous series of colors and tones</li>
+          <li>Memorize the sequence</li>
+          <li>Repeat the sequence by clicking on the buttons</li>
+          <li>The series will <em>progressively</em> become longer and more complex as you level up</li>
+        </ol>
+        <p>Example:</p>
+        <div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th class="sequence-tb">Sequences</th>
+            <th class="simon-you">Simon</th>
+            <th class="simon-you">You</th>
+          </tr>
+
+          <tr>
+            <td class="sequence-tb">First<br /><a style="color: green;">GREEN</a></td>
+            <td class="simon-tb"><a style="color: green;">GREEN</a></td>
+            <td class="simon-tb"><a style="color: green;">GREEN</a></td>
+          </tr>
+          <tr>
+            <td class="sequence-tb">Second<br /><a style="color: green;">GREEN</a> &rarr; <a style="color: blue;">BLUE</a></td>
+            <td class="simon-tb"><a style="color: blue;">BLUE</a></td>
+            <td class="simon-tb"><a style="color: green;">GREEN</a> &rarr; <a style="color: blue;">BLUE</a></td>
+          </tr>
+          <tr>
+            <td class="sequence-tb">Third<br /><a style="color: green;">GREEN</a> &rarr; <a style="color: blue;">BLUE</a> &rarr; <a style="color: red;">RED</a></td>
+            <td class="simon-tb"><a style="color: red;">RED</a></td>
+            <td class="simon-tb"><a style="color: green;">GREEN</a> &rarr; <a style="color: blue;">BLUE</a> &rarr; <a style="color: red;">RED</a></td>
+          </tr>
+        </table>
+        </div>
+
+      </div>
+
+      <div class="modal-footer">
+        <h4>Created by GPERSABLE (2019)</h4>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="game.js" charset="utf-8"></script>
+  <script src="modal.js" charset="utf-8"></script>
+</body>
+
+</html>
